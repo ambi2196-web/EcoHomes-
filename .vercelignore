@@ -1,0 +1,10 @@
+# Exclude backend — not needed for frontend-only Vercel deploy
+backend/
+
+# Exclude Tauri native build artifacts
+apps/desktop/src-tauri/
+**/target/
+
+# Exclude test/docs
+**/*.test.*
+**/*.spec.*

@@ -60,7 +60,8 @@ function getSuggestions(zone?: string): string[] {
 
 // ── API call ──────────────────────────────────────────────────────────────
 
-const BACKEND = "http://localhost:8000";
+// Use VITE_API_URL env var in production; fallback to localhost in dev
+const BACKEND = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 async function sendMessage(
   message: string,
