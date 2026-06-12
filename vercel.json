@@ -1,17 +1,7 @@
 {
   "buildCommand": "pnpm install --no-frozen-lockfile && pnpm --filter desktop exec vite build",
   "outputDirectory": "apps/desktop/dist",
-  "installCommand": "npm install -g pnpm && pnpm install --no-frozen-lockfile",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" }
-      ]
-    }
   ]
 }
