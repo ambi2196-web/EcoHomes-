@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Send, Bot, User, RefreshCw, Sparkles, Loader2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Send, Bot, User, RefreshCw, Sparkles, Loader2, Box } from "lucide-react";
 import { useProjectStore } from "../store/projectStore";
 
 // ── Types ─────────────────────────────────────────────────────────────────
@@ -321,10 +321,10 @@ export default function Step6Consult() {
       {/* Nav */}
       <div className="flex justify-between pt-3 flex-shrink-0">
         <button onClick={() => navigate("/wizard/step5")} className="btn-secondary flex items-center gap-2">
-          <ArrowLeft size={16} /> Back to Prototype
+          <ArrowLeft size={16} /> Back
         </button>
-        <button onClick={() => store.reset()} className="btn-secondary text-sm">
-          Start new project
+        <button onClick={() => navigate("/wizard/step7")} className="btn-primary flex items-center gap-2">
+          <Box size={16} /> 3D Preview <ArrowRight size={16} />
         </button>
       </div>
     </div>

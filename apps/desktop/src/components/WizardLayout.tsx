@@ -1,5 +1,5 @@
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import { Home, MapPin, ClipboardList, BarChart2, Palette, FileImage, MessageSquare } from "lucide-react";
+import { Home, MapPin, ClipboardList, BarChart2, Palette, FileImage, MessageSquare, Box } from "lucide-react";
 import clsx from "clsx";
 
 const STEPS = [
@@ -9,6 +9,7 @@ const STEPS = [
   { path: "step4", label: "Style",        icon: Palette,         phase: 2 },
   { path: "step5", label: "Prototype",    icon: FileImage,       phase: 2 },
   { path: "step6", label: "AI Consult",   icon: MessageSquare,   phase: 3 },
+  { path: "step7", label: "3D Preview",   icon: Box,             phase: 4 },
 ];
 
 export default function WizardLayout() {
@@ -46,19 +47,19 @@ export default function WizardLayout() {
                 <button
                   onClick={() => isDone && navigate(`/wizard/${step.path}`)}
                   className={clsx(
-                    "flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors truncate",
+                    "flex items-center gap-2 px-2 py-1.5 rounded-lg text-xs font-medium transition-colors truncate",
                     isActive && "bg-forest-600 text-white",
                     isDone && "bg-forest-100 text-forest-700 hover:bg-forest-200 cursor-pointer",
                     !isActive && !isDone && "text-gray-400 cursor-default"
                   )}
                 >
-                  <Icon size={15} className="shrink-0" />
-                  <span className="truncate">{step.label}</span>
+                  <Icon size={13} className="shrink-0" />
+                  <span className="truncate hidden sm:inline">{step.label}</span>
                 </button>
                 {i < STEPS.length - 1 && (
                   <div
                     className={clsx(
-                      "h-px flex-1 min-w-[8px]",
+                      "h-px flex-1 min-w-[4px]",
                       i < currentStep ? "bg-forest-300" : "bg-earth-200"
                     )}
                   />

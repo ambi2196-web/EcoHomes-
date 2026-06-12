@@ -6,6 +6,7 @@ import Step3Analysis from "./pages/Step3Analysis";
 import Step4Style from "./pages/Step4Style";
 import Step5Prototype from "./pages/Step5Prototype";
 import Step6Consult from "./pages/Step6Consult";
+import Step7Preview from "./pages/Step7Preview";
 import Home from "./pages/Home";
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="step4" element={<Step4Style />} />
         <Route path="step5" element={<Step5Prototype />} />
         <Route path="step6" element={<Step6Consult />} />
+        <Route path="step7" element={<Step7Preview />} />
       </Route>
     </Routes>
   );
