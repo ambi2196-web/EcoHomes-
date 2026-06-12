@@ -1,13 +1,14 @@
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import { Home, MapPin, ClipboardList, BarChart2, Palette, FileImage } from "lucide-react";
+import { Home, MapPin, ClipboardList, BarChart2, Palette, FileImage, MessageSquare } from "lucide-react";
 import clsx from "clsx";
 
 const STEPS = [
-  { path: "step1", label: "Location",     icon: MapPin,        phase: 1 },
-  { path: "step2", label: "Requirements", icon: ClipboardList, phase: 1 },
-  { path: "step3", label: "Analysis",     icon: BarChart2,     phase: 2 },
-  { path: "step4", label: "Style",        icon: Palette,       phase: 2 },
-  { path: "step5", label: "Prototype",    icon: FileImage,     phase: 2 },
+  { path: "step1", label: "Location",     icon: MapPin,          phase: 1 },
+  { path: "step2", label: "Requirements", icon: ClipboardList,   phase: 1 },
+  { path: "step3", label: "Analysis",     icon: BarChart2,       phase: 2 },
+  { path: "step4", label: "Style",        icon: Palette,         phase: 2 },
+  { path: "step5", label: "Prototype",    icon: FileImage,       phase: 2 },
+  { path: "step6", label: "AI Consult",   icon: MessageSquare,   phase: 3 },
 ];
 
 export default function WizardLayout() {

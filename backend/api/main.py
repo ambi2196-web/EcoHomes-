@@ -30,10 +30,10 @@ def health():
     return {"status": "ok", "version": "0.1.0"}
 
 
-from .routers import ens
-app.include_router(ens.router, prefix="/api/ens", tags=["ENS Scoring"])
+from .routers import ens, consult
+app.include_router(ens.router,     prefix="/api/ens",     tags=["ENS Scoring"])
+app.include_router(consult.router, prefix="/api/consult", tags=["AI Consultation"])
 
-# Phase 3+
-# from .routers import consult, layout
-# app.include_router(consult.router, prefix="/api/consult", tags=["AI Consultation"])
-# app.include_router(layout.router,  prefix="/api/layout",  tags=["Layout Generator"])
+# Phase 4+
+# from .routers import layout
+# app.include_router(layout.router, prefix="/api/layout", tags=["Layout Generator"])

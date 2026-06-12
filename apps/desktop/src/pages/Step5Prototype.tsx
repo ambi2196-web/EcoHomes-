@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Download, RefreshCw, Loader2, BarChart2, Layout, FileText } from "lucide-react";
+import { ArrowLeft, ArrowRight, Download, RefreshCw, Loader2, BarChart2, Layout, FileText, MessageSquare } from "lucide-react";
 import { useProjectStore } from "../store/projectStore";
 import ENSScorecard from "../components/ENSScorecard";
 import {
@@ -230,6 +230,9 @@ export default function Step5Prototype() {
       <div className="flex justify-between pt-2">
         <button onClick={() => navigate("/wizard/step4")} className="btn-secondary flex items-center gap-2">
           <ArrowLeft size={16} /> Back
+        </button>
+        <button onClick={() => navigate("/wizard/step6")} className="btn-primary flex items-center gap-2">
+          <MessageSquare size={16} /> AI Consultation <ArrowRight size={16} />
         </button>
       </div>
     </div>
